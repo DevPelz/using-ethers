@@ -2,7 +2,7 @@ import {ethers} from "ethers";
 
   const balances = async (address) => {
     const provider = new ethers.providers.JsonRpcProvider("https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY");
-    const Balance = ethers.utils.formatEther(await sepoliaprovider.getBalance(address));
+    const Balance = ethers.utils.formatEther(await provider.getBalance(address));
     const txCount = await provider.getTransactionCount(address);
     const blcknum = await provider.getBlockNumber();
 
